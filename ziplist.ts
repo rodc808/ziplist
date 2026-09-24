@@ -11,3 +11,11 @@ function zipList(listArray1: (number | string)[], listArray2: (number | string)[
 }
 
 console.log(zipList(testArray1, testArray2));
+
+function zipListTheFunctionalWay(listArray1: (number | string)[], listArray2: (number | string)[]): 
+(number | string)[] {
+  const result = listArray1.flatMap((item, i) => [item, listArray2[i]]);
+  return result;
+}
+
+console.log(zipListTheFunctionalWay(testArray1, testArray2));

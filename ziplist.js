@@ -10,3 +10,8 @@ function zipList(listArray1, listArray2) {
     return result;
 }
 console.log(zipList(testArray1, testArray2));
+function zipListTheFunctionalWay(listArray1, listArray2) {
+    const result = listArray1.flatMap((item, i) => [item, listArray2[i]]);
+    return result;
+}
+console.log(zipListTheFunctionalWay(testArray1, testArray2));
